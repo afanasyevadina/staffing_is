@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <h1 class="mb-4">
-        <a href="{{ route('reports') }}" class="text-decoration-none">Отчеты</a> / Вакансии
+        <a href="{{ route('reports') }}" class="text-decoration-none">Отчеты</a> / Ветераны
     </h1>
     <table class="table">
         <thead class="table-dark">

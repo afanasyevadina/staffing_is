@@ -19,7 +19,9 @@
             <tr>
                 <td>{{ $department->id }}</td>
                 <td>
-                    <a href="{{ route('departments.view', $department->id) }}">{{ $department->name }}</a>
+                    <a href="{{ route('departments.view', $department->id) }}" class="text-decoration-none">
+                        {{ $department->name }}
+                    </a>
                 </td>
                 <td>{{ $department->positions_count }}</td>
                 <td>{{ $department->active_employees_count }}</td>

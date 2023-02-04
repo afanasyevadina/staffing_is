@@ -24,7 +24,7 @@ class DepartmentPositionEmployeeSeeder extends Seeder
         $department1->employees()->attach(4, ['position_id' => 3, 'positions_count' => 1, 'employed_date' => '2020-06-06']);
         $department1->employees()->attach(5, ['position_id' => 3, 'positions_count' => 1, 'employed_date' => '2018-06-06']);
         $department1->employees()->attach(6, ['position_id' => 4, 'positions_count' => 0.5, 'employed_date' => '2015-06-06']);
-        $department1->employees()->attach(7, ['position_id' => 5, 'positions_count' => 1, 'employed_date' => '2000-06-06']);
+        $department1->employees()->attach(7, ['position_id' => 5, 'positions_count' => 0.5, 'employed_date' => '2000-06-06']);
         $department1->employees()->attach(6, ['position_id' => 6, 'positions_count' => 0.5, 'employed_date' => '2021-06-06']);
 
         $department2->employees()->attach(7, ['position_id' => 1, 'positions_count' => 1, 'employed_date' => '1990-05-05']);

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <h1 class="mb-4">
-        <a href="{{ route('departments') }}" class="text-decoration-none">Кафедры</a> / {{ $department->name }} / Позиции
+        <a href="{{ route('departments') }}" class="text-decoration-none">Кафедры</a> / {{ $department->name }}
     </h1>
     <div class="d-flex justify-content-end">
         <a href="#" class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#add">Добавить</a>
@@ -12,6 +12,7 @@
             <th>#</th>
             <th>Название</th>
             <th>Кол-во позиций</th>
+            <th>Кол-во сотрудников</th>
             <th></th>
         </tr>
         </thead>
@@ -25,6 +26,7 @@
                     </a>
                 </td>
                 <td>{{ $departmentPosition->pivot->positions_count }}</td>
+                <td>{{ $department->activeEmployees()->where('position_id', $departmentPosition->id)->count() }}</td>
                 <td class="text-end text-nowrap">
                     <a href="#" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#edit-{{ $departmentPosition->id }}">
                         <i class="fas fa-pen"></i>

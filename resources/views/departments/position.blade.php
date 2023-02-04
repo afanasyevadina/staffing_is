@@ -3,7 +3,7 @@
     <h1 class="mb-4">
         <a href="{{ route('departments') }}" class="text-decoration-none">Кафедры</a> /
         <a href="{{ route('departments.view', $department->id) }}">{{ $department->name }}</a> /
-        {{ $position->name }} / Сотрудники
+        {{ $position->name }}
     </h1>
     <div class="d-flex justify-content-end">
         <a href="#" class="btn btn-success mb-4" data-bs-toggle="modal" data-bs-target="#add">Добавить</a>
@@ -32,7 +32,7 @@
                 <td>{{ $departmentEmployee->iin }}</td>
                 <td>{{ $departmentEmployee->pivot->positions_count }}</td>
                 <td>{{ $departmentEmployee->pivot->employed_date ? \Carbon\Carbon::create($departmentEmployee->pivot->employed_date)->format('d.m.Y') : '' }}</td>
-                <td>{{ $departmentEmployee->pivot->fired_date ? \Carbon\Carbon::create($departmentEmployee->pivot->fired_date)->format('d.m.Y') : '' }}</td>
+                <td>{{ $departmentEmployee->pivot->fired_date ? \Carbon\Carbon::create($departmentEmployee->pivot->fired_date)->format('d.m.Y') : '-' }}</td>
                 <td class="text-end text-nowrap">
                     <a href="#" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#edit-{{ $departmentEmployee->id }}">
                         <i class="fas fa-pen"></i>
